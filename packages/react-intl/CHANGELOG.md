@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](github.com/formatjs/formatjs/compare/react-intl@8.2.0...react-intl@10.0.0) (2026-03-16)
+
+### Features
+
+* **react-intl:** bump to v9.0.0 ([#6112](/github.com/formatjs/formatjs/issues/6112)) ([8de45c7](github.com/formatjs/formatjs/commits/8de45c7f4bca0852b3844775a234f54fec3e2739)) - by @longlho
+
+### BREAKING CHANGES
+
+* **react-intl:** Major version bump for react-intl.
+See https://formatjs.github.io/docs/react-intl/upgrade-guide-9.x for
+migration instructions.
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+Co-authored-by: Claude Opus 4.6 (1M context) <noreply@anthropic.com>
+
 # [8.2.0](github.com/formatjs/formatjs/compare/react-intl@8.1.4...react-intl@8.2.0) (2026-03-16)
 
 ### Bug Fixes

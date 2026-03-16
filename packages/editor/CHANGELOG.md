@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.18](github.com/formatjs/formatjs/compare/@formatjs/editor@3.0.17...@formatjs/editor@3.0.18) (2026-03-16)
+
+**Note:** Version bump only for package @formatjs/editor
+
 ## [3.0.17](github.com/formatjs/formatjs/compare/@formatjs/editor@3.0.16...@formatjs/editor@3.0.17) (2026-03-16)
 
 **Note:** Version bump only for package @formatjs/editor
