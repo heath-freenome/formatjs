@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.3.0](https://github.com/formatjs/formatjs/compare/babel-plugin-formatjs@11.2.5...babel-plugin-formatjs@11.3.0) (2026-03-17)
+
+### Features
+
+* **@formatjs/cli-lib:** add AbortSignal support to extract() and compile() ([#6131](https://github.com/formatjs/formatjs/issues/6131)) ([19fd7e0](https://github.com/formatjs/formatjs/commit/19fd7e07049d44a5f3b282d3930616690d9fb3e6)), closes [#6067](https://github.com/formatjs/formatjs/issues/6067) - by @longlho
+
 ## [11.2.5](https://github.com/formatjs/formatjs/compare/babel-plugin-formatjs@11.2.4...babel-plugin-formatjs@11.2.5) (2026-03-16)
 
 **Note:** Version bump only for package babel-plugin-formatjs

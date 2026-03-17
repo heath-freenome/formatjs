@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.4.0](https://github.com/formatjs/formatjs/compare/@formatjs/cli-lib@8.3.2...@formatjs/cli-lib@8.4.0) (2026-03-17)
+
+### Features
+
+* **@formatjs/cli-lib:** add AbortSignal support to extract() and compile() ([#6131](https://github.com/formatjs/formatjs/issues/6131)) ([19fd7e0](https://github.com/formatjs/formatjs/commit/19fd7e07049d44a5f3b282d3930616690d9fb3e6)), closes [#6067](https://github.com/formatjs/formatjs/issues/6067) - by @longlho
+* **@formatjs/svelte-intl:** add runtime package, CLI extraction, and docs for .svelte files ([#6122](https://github.com/formatjs/formatjs/issues/6122)) ([fc35630](https://github.com/formatjs/formatjs/commit/fc356309a0324c22b54adaa18413ddec7cfcce12)) - by @longlho
+
 ## [8.3.2](https://github.com/formatjs/formatjs/compare/@formatjs/cli-lib@8.3.1...@formatjs/cli-lib@8.3.2) (2026-03-16)
 
 **Note:** Version bump only for package @formatjs/cli-lib

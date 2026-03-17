@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.2.0](https://github.com/formatjs/formatjs/compare/vue-intl@7.1.4...vue-intl@7.2.0) (2026-03-17)
+
+### Features
+
+* **@formatjs/cli-lib:** add AbortSignal support to extract() and compile() ([#6131](https://github.com/formatjs/formatjs/issues/6131)) ([19fd7e0](https://github.com/formatjs/formatjs/commit/19fd7e07049d44a5f3b282d3930616690d9fb3e6)), closes [#6067](https://github.com/formatjs/formatjs/issues/6067) - by @longlho
+
 ## [7.1.4](https://github.com/formatjs/formatjs/compare/vue-intl@7.1.3...vue-intl@7.1.4) (2026-03-16)
 
 **Note:** Version bump only for package vue-intl
