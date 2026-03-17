@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.4.3](https://github.com/formatjs/formatjs/compare/eslint-plugin-formatjs@6.4.2...eslint-plugin-formatjs@6.4.3) (2026-03-17)
+
+### Bug Fixes
+
+* **eslint-plugin-formatjs:** restore ability to import util module ([#6144](https://github.com/formatjs/formatjs/issues/6144)) ([94f6f5e](https://github.com/formatjs/formatjs/commit/94f6f5e97489edd59601ea363962381fdae5a51a)) - by @timmorey
+
 ## [6.4.2](https://github.com/formatjs/formatjs/compare/eslint-plugin-formatjs@6.4.1...eslint-plugin-formatjs@6.4.2) (2026-03-17)
 
 **Note:** Version bump only for package eslint-plugin-formatjs
