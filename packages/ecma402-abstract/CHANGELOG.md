@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](github.com/formatjs/formatjs/compare/@formatjs/ecma402-abstract@3.1.2...@formatjs/ecma402-abstract@3.2.0) (2026-03-17)
+
+### Features
+
+* **@formatjs/ecma402-abstract:** migrate from decimal.js to @formatjs/bigdecimal ([#6148](/github.com/formatjs/formatjs/issues/6148)) ([93744d4](github.com/formatjs/formatjs/commits/93744d4732ab2dfdc93e7ddb2a73e80a6e461534)) - by @longlho
+
 ## [3.1.2](github.com/formatjs/formatjs/compare/@formatjs/ecma402-abstract@3.1.1...@formatjs/ecma402-abstract@3.1.2) (2026-03-16)
 
 **Note:** Version bump only for package @formatjs/ecma402-abstract

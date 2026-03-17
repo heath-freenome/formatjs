@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [11.2.0](github.com/formatjs/formatjs/compare/intl-messageformat@11.1.3...intl-messageformat@11.2.0) (2026-03-17)
+
+### Features
+
+* **@formatjs/ecma402-abstract:** migrate from decimal.js to @formatjs/bigdecimal ([#6148](/github.com/formatjs/formatjs/issues/6148)) ([93744d4](github.com/formatjs/formatjs/commits/93744d4732ab2dfdc93e7ddb2a73e80a6e461534)) - by @longlho
+
 ## [11.1.3](github.com/formatjs/formatjs/compare/intl-messageformat@11.1.2...intl-messageformat@11.1.3) (2026-03-16)
 
 **Note:** Version bump only for package intl-messageformat

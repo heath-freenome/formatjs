@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.3.0](https://github.com/formatjs/formatjs/compare/@formatjs/intl-datetimeformat@7.2.6...@formatjs/intl-datetimeformat@7.3.0) (2026-03-17)
+
+### Features
+
+* **@formatjs/ecma402-abstract:** migrate from decimal.js to @formatjs/bigdecimal ([#6148](https://github.com/formatjs/formatjs/issues/6148)) ([93744d4](https://github.com/formatjs/formatjs/commit/93744d4732ab2dfdc93e7ddb2a73e80a6e461534)) - by @longlho
+* buffer locale data for parallel polyfill + data loading ([#6145](https://github.com/formatjs/formatjs/issues/6145)) ([1b28e30](https://github.com/formatjs/formatjs/commit/1b28e30c26c264a039e1326a45c4fecb649e5d45)), closes [#4457](https://github.com/formatjs/formatjs/issues/4457) - by @longlho
+
 ## [7.2.6](https://github.com/formatjs/formatjs/compare/@formatjs/intl-datetimeformat@7.2.5...@formatjs/intl-datetimeformat@7.2.6) (2026-03-16)
 
 **Note:** Version bump only for package @formatjs/intl-datetimeformat

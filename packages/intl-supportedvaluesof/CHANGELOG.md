@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/formatjs/formatjs/compare/@formatjs/intl-supportedvaluesof@2.2.2...@formatjs/intl-supportedvaluesof@2.3.0) (2026-03-17)
+
+### Features
+
+* **@formatjs/ecma402-abstract:** migrate from decimal.js to @formatjs/bigdecimal ([#6148](https://github.com/formatjs/formatjs/issues/6148)) ([93744d4](https://github.com/formatjs/formatjs/commit/93744d4732ab2dfdc93e7ddb2a73e80a6e461534)) - by @longlho
+
 ## [2.2.2](https://github.com/formatjs/formatjs/compare/@formatjs/intl-supportedvaluesof@2.2.1...@formatjs/intl-supportedvaluesof@2.2.2) (2026-03-16)
 
 **Note:** Version bump only for package @formatjs/intl-supportedvaluesof
