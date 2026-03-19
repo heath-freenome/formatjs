@@ -148,12 +148,9 @@ export function transform(
     const descriptor: MessageDescriptor = {}
     const locations: DescriptorLocation = {}
 
-    // Use the position right after the element name as the insertion point
-    // Find the first attribute start, or use the end of the element name
-    const firstAttr = attributes[0]
-    locations.insertionPoint = firstAttr
-      ? firstAttr.start
-      : elementNode.name.end
+    // Always insert after the element name so the id survives even when the
+    // first attribute (e.g. description) is removed.
+    locations.insertionPoint = elementNode.name.end
 
     for (const attr of attributes) {
       if (attr.type !== 'JSXAttribute') continue
@@ -228,7 +225,7 @@ export function transform(
       } else if (locations.insertionPoint != null) {
         // Insert id at a stable position (after `{` for objects, before first attr for JSX)
         if (isJSX) {
-          s.appendLeft(locations.insertionPoint, `id=${JSON.stringify(newId)} `)
+          s.appendLeft(locations.insertionPoint, ` id=${JSON.stringify(newId)}`)
         } else {
           s.appendRight(
             locations.insertionPoint,
@@ -350,15 +347,17 @@ export function transform(
     while (i >= 0 && /[a-zA-Z0-9_$]/.test(code[i])) i--
     const attrStart = i + 1
 
-    let attrEnd = loc.end
-    // Skip trailing whitespace
-    let j = attrEnd
-    while (j < code.length && (code[j] === ' ' || code[j] === '\t')) j++
-    attrEnd = j
+    const attrEnd = loc.end
 
-    // Also remove leading whitespace
+    // Remove leading whitespace/newline before attribute name.
+    // We intentionally do NOT consume trailing whitespace so that when attributes
+    // are on the same line the space before the next attribute is preserved.
+    // e.g. `<FM description="x" defaultMessage="y" />` → `<FM defaultMessage="y" />`
     let k = attrStart - 1
     while (k >= 0 && (code[k] === ' ' || code[k] === '\t')) k--
+    // Also include the preceding newline for multi-line JSX so the whole line is removed.
+    if (k >= 0 && code[k] === '\n') k--
+    if (k >= 0 && code[k] === '\r') k--
     const removeStart = k + 1
 
     s.remove(removeStart, attrEnd)
