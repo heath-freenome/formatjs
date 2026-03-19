@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [12.3.1](github.com/formatjs/formatjs/compare/@formatjs/intl-relativetimeformat@12.3.0...@formatjs/intl-relativetimeformat@12.3.1) (2026-03-19)
+
+### Bug Fixes
+
+* **deps:** update .bazeliskrc to Bazel 9.0.1 ([#6151](/github.com/formatjs/formatjs/issues/6151)) ([92f9803](github.com/formatjs/formatjs/commits/92f9803232789835d97d97d336ddbbdefb753c6c)), closes [#6135](github.com/formatjs/formatjs/issues/6135) - by @longlho
+
 # [12.3.0](github.com/formatjs/formatjs/compare/@formatjs/intl-relativetimeformat@12.2.4...@formatjs/intl-relativetimeformat@12.3.0) (2026-03-17)
 
 ### Features

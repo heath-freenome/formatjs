@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/formatjs/formatjs/compare/@formatjs/vite-plugin@1.1.2...@formatjs/vite-plugin@1.1.3) (2026-03-19)
+
+**Note:** Version bump only for package @formatjs/vite-plugin
+
 ## [1.1.2](https://github.com/formatjs/formatjs/compare/@formatjs/vite-plugin@1.1.1...@formatjs/vite-plugin@1.1.2) (2026-03-17)
 
 **Note:** Version bump only for package @formatjs/vite-plugin

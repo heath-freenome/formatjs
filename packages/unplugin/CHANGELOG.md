@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/formatjs/formatjs/compare/@formatjs/unplugin@1.1.2...@formatjs/unplugin@1.1.3) (2026-03-19)
+
+### Bug Fixes
+
+* **@formatjs/unplugin:** preserve space when removing JSX attribute on single line ([#6165](https://github.com/formatjs/formatjs/issues/6165)) ([db32215](https://github.com/formatjs/formatjs/commit/db322150e03bcd642ffe0a641d33aa62ae5596be)), closes [#6164](https://github.com/formatjs/formatjs/issues/6164) - by @longlho
+* **deps:** update oxlint monorepo ([#6134](https://github.com/formatjs/formatjs/issues/6134)) ([d62295b](https://github.com/formatjs/formatjs/commit/d62295b3f8e8bfa7fe548a4e23b2629d2d86f10c)) - by @renovate[bot]
+
 ## [1.1.2](https://github.com/formatjs/formatjs/compare/@formatjs/unplugin@1.1.1...@formatjs/unplugin@1.1.2) (2026-03-17)
 
 ### Bug Fixes

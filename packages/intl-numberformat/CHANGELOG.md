@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [9.3.1](https://github.com/formatjs/formatjs/compare/@formatjs/intl-numberformat@9.3.0...@formatjs/intl-numberformat@9.3.1) (2026-03-19)
+
+### Bug Fixes
+
+* **deps:** update .bazeliskrc to Bazel 9.0.1 ([#6151](https://github.com/formatjs/formatjs/issues/6151)) ([92f9803](https://github.com/formatjs/formatjs/commit/92f9803232789835d97d97d336ddbbdefb753c6c)), closes [#6135](https://github.com/formatjs/formatjs/issues/6135) - by @longlho
+
 # [9.3.0](https://github.com/formatjs/formatjs/compare/@formatjs/intl-numberformat@9.2.4...@formatjs/intl-numberformat@9.3.0) (2026-03-17)
 
 ### Features
