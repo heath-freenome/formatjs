@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/formatjs/formatjs/compare/@formatjs/unplugin@1.1.3...@formatjs/unplugin@1.1.4) (2026-03-20)
+
+**Note:** Version bump only for package @formatjs/unplugin
+
 ## [1.1.3](https://github.com/formatjs/formatjs/compare/@formatjs/unplugin@1.1.2...@formatjs/unplugin@1.1.3) (2026-03-19)
 
 ### Bug Fixes

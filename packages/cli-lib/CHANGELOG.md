@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.5.0](https://github.com/formatjs/formatjs/compare/@formatjs/cli-lib@8.4.1...@formatjs/cli-lib@8.5.0) (2026-03-20)
+
+### Features
+
+* **@formatjs/cli:** add --follow-links flag for symlink traversal in glob patterns ([#6174](https://github.com/formatjs/formatjs/issues/6174)) ([4d15497](https://github.com/formatjs/formatjs/commit/4d1549757383959d41f21bdd360d87dcf09271a0)) - by @longlho
+
 ## [8.4.1](https://github.com/formatjs/formatjs/compare/@formatjs/cli-lib@8.4.0...@formatjs/cli-lib@8.4.1) (2026-03-17)
 
 **Note:** Version bump only for package @formatjs/cli-lib
