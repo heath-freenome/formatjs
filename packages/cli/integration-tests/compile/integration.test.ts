@@ -1,4 +1,6 @@
 import {exec as nodeExec} from 'child_process'
+import {mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync} from 'fs'
+import {tmpdir} from 'os'
 import {join, resolve} from 'path'
 import {promisify} from 'util'
 import {describe, expect, test} from 'vitest'
@@ -239,4 +241,87 @@ describe.each([
       'Conflicting ID "a1d12" with different translation found in these 2 files'
     )
   })
+
+  test('compile glob with pnpm-style symlinked node_modules', async () => {
+    // Reproduces pnpm's node_modules layout where packages are stored
+    // in .pnpm and symlinked into node_modules. This is the exact
+    // scenario from issue #6173 that fails without --follow-links.
+    const tmp = mkdtempSync(join(tmpdir(), 'formatjs-pnpm-'))
+    try {
+      // Real package lives in .pnpm store
+      const realPkgDir = join(
+        tmp,
+        'node_modules',
+        '.pnpm',
+        'some-pkg@1.0.0',
+        'node_modules',
+        'some-pkg',
+        'dist',
+        'lang'
+      )
+      mkdirSync(realPkgDir, {recursive: true})
+      writeFileSync(
+        join(realPkgDir, 'en.json'),
+        JSON.stringify({
+          hello: {
+            defaultMessage: 'Hello from symlinked package!',
+            description: 'Symlink test',
+          },
+        })
+      )
+      // Symlink node_modules/some-pkg -> .pnpm/some-pkg@1.0.0/node_modules/some-pkg
+      symlinkSync(
+        join(
+          tmp,
+          'node_modules',
+          '.pnpm',
+          'some-pkg@1.0.0',
+          'node_modules',
+          'some-pkg'
+        ),
+        join(tmp, 'node_modules', 'some-pkg')
+      )
+      const result = await exec(
+        `${binPath} compile "${join(tmp, 'node_modules/some-pkg/**/lang/en.json')}"`
+      )
+      expect(JSON.parse(result.stdout)).toEqual({
+        hello: 'Hello from symlinked package!',
+      })
+    } finally {
+      rmSync(tmp, {recursive: true, force: true})
+    }
+  }, 20000)
+
+  test('compile glob with node_modules structure', async () => {
+    // Create a temp dir with node_modules structure on the fly
+    // to avoid Bazel glob() excluding node_modules directories.
+    // This reproduces the exact scenario from issue #6173.
+    const tmp = mkdtempSync(join(tmpdir(), 'formatjs-test-'))
+    try {
+      const langDir = join(tmp, 'node_modules', 'some-pkg', 'dist', 'lang')
+      mkdirSync(langDir, {recursive: true})
+      writeFileSync(
+        join(langDir, 'en.json'),
+        JSON.stringify({
+          greeting: {
+            defaultMessage: 'Hello from package!',
+            description: 'Greeting from a nested package',
+          },
+          farewell: {
+            defaultMessage: 'Goodbye from package!',
+            description: 'Farewell from a nested package',
+          },
+        })
+      )
+      const result = await exec(
+        `${binPath} compile "${join(tmp, 'node_modules/**/dist/lang/en.json')}"`
+      )
+      expect(JSON.parse(result.stdout)).toEqual({
+        farewell: 'Goodbye from package!',
+        greeting: 'Hello from package!',
+      })
+    } finally {
+      rmSync(tmp, {recursive: true, force: true})
+    }
+  }, 20000)
 })
