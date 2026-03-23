@@ -1,5 +1,6 @@
 import {describe, expect, test} from 'vitest'
 import {transform, type Options} from '../transform.js'
+import {interpolateName} from '@formatjs/ts-transformer'
 
 function t(
   code: string,
@@ -218,6 +219,55 @@ describe('@formatjs/unplugin transform', () => {
     test('skips non-static expressions', () => {
       const input = `intl.formatMessage({defaultMessage: getMessage()})`
       expect(t(input)).toBe(input)
+    })
+  })
+
+  describe('flatten', () => {
+    test('normalizes ICU format and generates ID from flattened message', () => {
+      // Message is a top-level plural: ICU format is normalized (spaces removed around commas/braces)
+      // This ensures the ID matches formatjs extract with --flatten (Rust CLI: 14X+wqft)
+      const input = `<FormattedMessage defaultMessage="{numberOfConsultations, plural, one {# consultation} other {# consultations}}" />`
+      expect(
+        t(input, {
+          idInterpolationPattern: '[sha512:contenthash:base64:8]',
+          flatten: true,
+        })
+      ).toBe(
+        `<FormattedMessage id="14X+wqft" defaultMessage="{numberOfConsultations,plural,one{# consultation} other{# consultations}}" />`
+      )
+    })
+
+    test('hoists select/plural patterns to full sentences', () => {
+      const input = `<FormattedMessage defaultMessage="Are you sure you want to delete {count,plural,one {this report template} other {these # report templates}}?" />`
+      const flattenedMsg =
+        '{count,plural,one{Are you sure you want to delete this report template?} other{Are you sure you want to delete these # report templates?}}'
+      const expectedId = interpolateName(
+        {resourcePath: '/path/to/file.tsx'} as any,
+        '[sha512:contenthash:base64:6]',
+        {content: flattenedMsg}
+      )
+      expect(t(input, {flatten: true})).toBe(
+        `<FormattedMessage id="${expectedId}" defaultMessage="${flattenedMsg}" />`
+      )
+    })
+
+    test('generates different ID with flatten vs without', () => {
+      const input = `<FormattedMessage defaultMessage="{foo, plural, one {item} other {items}}" />`
+      const withFlatten = t(input, {flatten: true})
+      const withoutFlatten = t(input, {flatten: false})
+      const idWithFlatten = withFlatten.match(/id="([^"]+)"/)?.[1]
+      const idWithoutFlatten = withoutFlatten.match(/id="([^"]+)"/)?.[1]
+      expect(idWithFlatten).toBeDefined()
+      expect(idWithoutFlatten).toBeDefined()
+      expect(idWithFlatten).not.toBe(idWithoutFlatten)
+    })
+
+    test('flatten is a no-op for plain messages without selectors', () => {
+      // Plain messages are not affected by hoisting
+      const input = `<FormattedMessage defaultMessage="Hello {name}" />`
+      const withFlatten = t(input, {flatten: true})
+      const withoutFlatten = t(input, {flatten: false})
+      expect(withFlatten).toBe(withoutFlatten)
     })
   })
 
