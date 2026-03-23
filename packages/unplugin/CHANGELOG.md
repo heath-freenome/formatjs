@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/formatjs/formatjs/compare/@formatjs/unplugin@1.1.4...@formatjs/unplugin@1.1.5) (2026-03-23)
+
+### Bug Fixes
+
+* **@formatjs/unplugin:** add flatten option to match babel-plugin-formatjs ID generation ([#6178](https://github.com/formatjs/formatjs/issues/6178)) ([9cc3087](https://github.com/formatjs/formatjs/commit/9cc3087bfd45a85982313e0597f1052787574349)), closes [#6177](https://github.com/formatjs/formatjs/issues/6177) - by @longlho
+
 ## [1.1.4](https://github.com/formatjs/formatjs/compare/@formatjs/unplugin@1.1.3...@formatjs/unplugin@1.1.4) (2026-03-20)
 
 **Note:** Version bump only for package @formatjs/unplugin
