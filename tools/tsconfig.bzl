@@ -6,7 +6,7 @@ BASE_TSCONFIG = {
     "compilerOptions": {
         "module": "esnext",
         "moduleResolution": "bundler",
-        "target": "es5",
+        "target": "ES2017",
         "lib": [
             "dom",
             "ES2015",
@@ -25,10 +25,8 @@ BASE_TSCONFIG = {
         "strict": True,
         "resolveJsonModule": True,
         "noUnusedLocals": True,
-        "esModuleInterop": False,
         "noUnusedParameters": True,
         "preserveConstEnums": True,
-        "allowSyntheticDefaultImports": False,
         "noFallthroughCasesInSwitch": True,
         "verbatimModuleSyntax": True,
         "importHelpers": False,
@@ -40,6 +38,13 @@ BASE_TSCONFIG = {
         "packages/react-intl/example-sandboxes",
         "**/*.test-d.ts",
     ],
+}
+
+# Base + Node types - for packages that import Node builtins (fs, path, etc.)
+BASE_NODE_TSCONFIG = BASE_TSCONFIG | {
+    "compilerOptions": BASE_TSCONFIG["compilerOptions"] | {
+        "types": ["node"],
+    },
 }
 
 # ESM ESNext configuration (tsconfig.esm.esnext.json) - merges with base
