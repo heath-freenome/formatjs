@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.5](github.com/formatjs/formatjs/compare/@formatjs/intl@4.1.4...@formatjs/intl@4.1.5) (2026-03-27)
+
+### Bug Fixes
+
+* **deps:** remove typescript peer dependencies ([#6180](/github.com/formatjs/formatjs/issues/6180)) ([b4dba3d](github.com/formatjs/formatjs/commits/b4dba3dfde138c2ea872a6372c01d8ad89216ee4)), closes [#6179](github.com/formatjs/formatjs/issues/6179) - by @camsteffen
+
 ## [4.1.4](github.com/formatjs/formatjs/compare/@formatjs/intl@4.1.3...@formatjs/intl@4.1.4) (2026-03-17)
 
 **Note:** Version bump only for package @formatjs/intl

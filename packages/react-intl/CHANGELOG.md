@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.1.1](github.com/formatjs/formatjs/compare/react-intl@10.1.0...react-intl@10.1.1) (2026-03-27)
+
+### Bug Fixes
+
+* **deps:** remove typescript peer dependencies ([#6180](/github.com/formatjs/formatjs/issues/6180)) ([b4dba3d](github.com/formatjs/formatjs/commits/b4dba3dfde138c2ea872a6372c01d8ad89216ee4)), closes [#6179](github.com/formatjs/formatjs/issues/6179) - by @camsteffen
+
 # [10.1.0](github.com/formatjs/formatjs/compare/react-intl@10.0.0...react-intl@10.1.0) (2026-03-17)
 
 ### Features

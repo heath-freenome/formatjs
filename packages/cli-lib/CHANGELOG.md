@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.5.1](https://github.com/formatjs/formatjs/compare/@formatjs/cli-lib@8.5.0...@formatjs/cli-lib@8.5.1) (2026-03-27)
+
+**Note:** Version bump only for package @formatjs/cli-lib
+
 # [8.5.0](https://github.com/formatjs/formatjs/compare/@formatjs/cli-lib@8.4.1...@formatjs/cli-lib@8.5.0) (2026-03-20)
 
 ### Features
